@@ -5,6 +5,8 @@
   --button-text: #ffffff;
   --number-bg: #eeeeee;
   --number-text: #333333;
+  --input-bg: #ffffff;
+  --input-border: #cccccc;
 }
 
 [data-theme='dark'] {
@@ -14,6 +16,8 @@
   --button-text: #ffffff;
   --number-bg: #333333;
   --number-text: #ffffff;
+  --input-bg: #2a2a2a;
+  --input-border: #444444;
 }
 
 body {
@@ -25,6 +29,50 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
+  padding: 0 20px;
+}
+
+#contact-section {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-top: 1px solid var(--input-border);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 #theme-toggle {
