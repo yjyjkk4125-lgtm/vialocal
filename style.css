@@ -1,1 +1,69 @@
-/* Add styles here */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
+  --number-bg: #eeeeee;
+  --number-text: #333333;
+}
+
+[data-theme='dark'] {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --button-bg: #0056b3;
+  --button-text: #ffffff;
+  --number-bg: #333333;
+  --number-text: #ffffff;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+#generator-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+#numbers-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--number-bg);
+  color: var(--number-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
